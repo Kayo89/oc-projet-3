@@ -1,0 +1,34 @@
+$color-primary: #fdcb46;
+$color-background: #579c87;
+
+$color-bg-enchantee: #fcdfdb;
+$color-bg-francaise: #fff5fe;
+$color-bg-papilles: #f9f9f9;
+$color-bg-gout: #fdfffd;
+
+$color-txt-enchantee: ( color-left:#3d1319, color-right:#3d1319);
+$color-txt-francaise: ( color-left:#d8852e, color-right:#905bfd);
+$color-txt-papilles: ( color-left:#0229dd, color-right:#0889fb);
+$color-txt-gout: ( color-left:#43973d, color-right:#beff7f);
+
+$color-content-francaise: (entree: #c67412, plat: #a56799, dessert: #6e4ccc);
+
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;
+
+$anim-dur: 800ms;
+$anim-delay: $anim-dur / 3;
+
+$menu-list: (
+        enchantee: (
+            bg: $color-bg-enchantee,
+            color: $color-txt-enchantee), 
+        francaise: (
+            bg: $color-bg-francaise,
+            color: $color-txt-francaise),
+        papilles: (
+            bg: $color-bg-papilles,
+            color: $color-txt-papilles), 
+        gout: (
+            bg: $color-bg-gout,
+            color:$color-txt-gout));

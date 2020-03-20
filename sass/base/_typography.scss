@@ -1,0 +1,37 @@
+@include font("calligraffitiregular", "Calligraffiti");
+@include font("black_jackregular", "blackjack");
+@include font("yellowtailregular", "Yellowtail-Regular");
+@include font("redressedregular", "Redressed");
+@include font("blokletters_potloodpotlood", "Blokletters-Potlood");
+@include font("jrhandregular", "jr!ha___");
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu__enchantee{
+    
+    &--name{
+        font-family: "black_jackregular", Arial, Helvetica, sans-serif;
+    }
+}
+.menu__francaise--name{
+    font-family: 'Verdana', Arial, Helvetica, sans-serif;
+}
+.menu__papilles--name{
+    font-family: "calligraffitiregular", Arial, Helvetica, sans-serif;
+}
+.menu__gout--name{
+    font-family: "jrhandregular", Arial, Helvetica, sans-serif;
+}
+
+.menu-page section {
+    font-family: "blokletters_potloodpotlood", Arial, Helvetica, sans-serif;
+}
+.menu-page__francaise section{
+    font-family: 'Verdana', Helvetica, sans-serif;
+}

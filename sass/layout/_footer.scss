@@ -1,0 +1,33 @@
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+}
+
+.footer{
+    margin-top: 5rem;
+    padding: 20px;
+    position: sticky;
+    bottom: 0px;
+    color: $color-primary;
+    background-color: $color-background;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    & a {
+        color: $color-primary;
+        text-decoration: none;
+    }
+    span:hover{
+        animation: wiggle 1s infinite ease-in-out;
+    }
+}

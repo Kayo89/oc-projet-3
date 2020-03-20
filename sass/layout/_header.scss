@@ -1,0 +1,13 @@
+.header{
+    text-align: center;
+    background-color: $color-background;
+    padding: 10px;
+    &__title{
+        color: $color-primary;
+        font-size: 3rem;
+    }
+    & a {
+        color: $color-primary;
+        text-decoration: none;
+    }
+}

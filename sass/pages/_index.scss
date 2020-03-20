@@ -1,0 +1,74 @@
+@keyframes dots {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.8);
+        transform-origin: bottom;
+    }
+}
+
+.menu{
+    display: grid;
+    width: 580px;
+    grid-template-columns: repeat(2, 260px);
+    grid-gap: 60px;
+    margin: 3rem auto;
+    text-align: center;
+    justify-items: center;
+    transform: scale(1);
+    @include mobile-only{
+        width: 260px;
+        grid-template-columns: repeat(1, 260px);
+        
+    }
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include select-menu;
+    @include menu($menu-list);
+    font-size: 1.5rem;
+    transition: all 300ms ease-in-out;
+    & img{
+        width: 40px;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover{
+        & img{
+            transform: scale(1.5);
+        }
+        font-size: 1.8rem;
+        opacity: .7;
+    }
+}
+
+.soon{
+    margin: 2rem auto;
+    width: 15rem;
+    text-align: center;
+    &__title{
+        width: 100%;
+        border-radius: 15px;
+        padding: 15px;
+        margin: auto;
+        background-color: $color-background;
+        color: $color-primary;
+        cursor: pointer;
+    }
+    &__dot {
+        padding-right: .2rem;
+        display: inline-block;
+    }
+    &:hover > &__title > &__dot{
+        animation: dots $anim-dur backwards infinite ease-in-out alternate;
+        @for $i from 1 through 3 {
+            &--#{$i}{
+                animation-delay: $anim-delay * $i;
+            } 
+         }
+    }
+}

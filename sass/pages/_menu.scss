@@ -1,0 +1,97 @@
+@keyframes subligne {
+    from {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+.menu-page{
+    width: 800px;
+    margin: 4rem auto;
+    padding-bottom: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    @include menu($menu-list);
+    @include mobile-only{
+        width: 100%;
+    }
+    > header {
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        @include mobile-only{
+            font-size: 2rem;
+        }
+        img{
+            width: 80px;
+        }
+    }
+    .entree, .plat, .dessert{
+        width: 90%;
+        margin: auto;
+        &__header{
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+            > h2 {
+                width: max-content;
+                margin: auto;
+                text-align: center;
+                @include mobile-only{
+                    font-size: 1rem;
+                }
+                > span{
+                    transform: scaleX(0);
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: black;
+                }
+                &:hover{
+                    > span{
+                        animation: subligne 2s ease-in-out;
+                    }
+                }
+            }
+        }
+        p {
+            width: 80%;
+            margin: 1rem auto;
+            display: flex;
+            justify-content: space-between;
+            @include mobile-only{
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .separator--left{
+        transform: rotate(180deg);
+    }
+    > footer {
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        gap: 10px;
+        img{
+            width: 40px;
+        }
+    }
+}
+.menu-page__francaise{
+    @each $key, $color in $color-content-francaise {
+        .#{$key}{
+            color: $color;
+            &__header{
+                > h2 > span {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}

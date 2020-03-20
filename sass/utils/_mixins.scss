@@ -1,0 +1,51 @@
+@mixin select-menu{
+    width: 260px;
+    height: 370px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@mixin menu($menu-list){
+    @each $menu, $color in $menu-list {
+        &__#{$menu}{
+            background-color: map-get($color, bg);
+                span{
+                    display: block;
+                }
+                .menu__#{$menu}--menu {
+                    color: map-get(map-get($color, color), color-left);
+                }
+                .menu__#{$menu}--name{
+                    @include color-gradient($color);
+                }
+                img {
+                    width: 25%;
+                }
+        } 
+    }
+}
+
+@mixin color-gradient($color){
+    background: linear-gradient(to right, map-get(map-get($color, color), color-left) , map-get(map-get($color, color), color-right));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin font($name-id, $name) {
+    @font-face {
+        font-family: $name-id;
+        src: url('../fonts/'+$name+'-webfont.eot');
+        src: url('../fonts/'+$name+'-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/'+$name+'-webfont.woff2') format('woff2'),
+             url('../fonts/'+$name+'-webfont.woff') format('woff'),
+             url('../fonts/'+$name+'-webfont.ttf') format('truetype'),
+             url('../fonts/'+$name+'-webfont.svg#'+$name-id+'') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin mobile-only{
+    @media screen and (max-width:599px){
+        @content;
+    }
+}
