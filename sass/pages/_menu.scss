@@ -10,13 +10,13 @@
 }
 
 .menu-page{
-    width: 800px;
+    width: 780px;
     margin: 4rem auto;
     padding-bottom: 5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     @include menu($menu-list);
     @include tablet-only{
-        width: 100%;
+        width: 95%;
     }
     > header {
         text-align: center;
@@ -60,14 +60,16 @@
             }
         }
         p {
-            width: 80%;
+            width: 85%;
             margin: 1rem auto;
             display: flex;
             justify-content: space-between;
-            gap: 1rem;
             font-size: 0.85rem;
             @include mobile-only{
                 font-size: 0.80rem;
+            }
+            span{
+                padding-left: 1rem;;
             }
         }
         &--ench p{
