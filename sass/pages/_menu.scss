@@ -15,7 +15,7 @@
     padding-bottom: 5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     @include menu($menu-list);
-    @include mobile-only{
+    @include tablet-only{
         width: 100%;
     }
     > header {
@@ -41,8 +41,9 @@
                 width: max-content;
                 margin: auto;
                 text-align: center;
+                font-size: 1.2rem;
                 @include mobile-only{
-                    font-size: 1rem;
+                    font-size: 0.95rem;
                 }
                 > span{
                     transform: scaleX(0);
@@ -63,24 +64,26 @@
             margin: 1rem auto;
             display: flex;
             justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.85rem;
             @include mobile-only{
-                font-size: 0.9rem;
+                font-size: 0.80rem;
             }
+        }
+        &--ench p{
+            width: 100%;
         }
     }
     .separator--left{
         transform: rotate(180deg);
     }
     > footer {
-        margin-top: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        gap: 10px;
         img{
             width: 40px;
         }
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 2rem;
     }
 }
 .menu-page__francaise{

@@ -29,9 +29,9 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-size: 1.25rem;
     @include select-menu;
     @include menu($menu-list);
-    font-size: 1.5rem;
     transition: all 300ms ease-in-out;
     & img{
         width: 40px;
@@ -39,22 +39,20 @@
     }
     &:hover{
         & img{
-            transform: scale(1.5);
+            transform: scale(1.4);
         }
-        font-size: 1.8rem;
-        opacity: .7;
+        font-size: 1.5rem;
+        opacity: .65;
     }
 }
 
 .soon{
-    margin: 2rem auto;
+    margin: auto;
     width: 15rem;
     text-align: center;
     &__title{
-        width: 100%;
         border-radius: 15px;
-        padding: 15px;
-        margin: auto;
+        padding: 13px;
         background-color: $color-background;
         color: $color-primary;
         cursor: pointer;

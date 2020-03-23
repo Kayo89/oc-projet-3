@@ -30,4 +30,8 @@
     span:hover{
         animation: wiggle 1s infinite ease-in-out;
     }
+    @include mobile-only{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
 }
