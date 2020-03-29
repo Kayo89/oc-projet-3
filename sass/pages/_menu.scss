@@ -54,7 +54,7 @@
                 }
                 &:hover{
                     > span{
-                        animation: subligne 2s ease-in-out;
+                        animation: subligne 2s ease-in-out forwards;
                     }
                 }
             }
@@ -79,7 +79,10 @@
     .separator--left{
         transform: rotate(180deg);
     }
-    > footer {
+    &__footer {
+        > span {
+            display: inline;
+        }
         img{
             width: 40px;
         }

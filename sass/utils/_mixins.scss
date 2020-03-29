@@ -1,13 +1,3 @@
-@mixin select-menu{
-    width: 280px;
-    height: 390px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    @include mobile-only{
-        width: 320px;
-        height: 430px;
-    }
-}
-
 @mixin menu($menu-list){
     @each $menu, $color in $menu-list {
         &__#{$menu}{
@@ -15,14 +5,14 @@
                 span{
                     display: block;
                 }
-                .menu__#{$menu}--menu {
+                .menus__#{$menu}--menu {
                     @if $menu == "enchantee" {
                         text-transform: uppercase;
                         font-weight: bold;
                     }
                     color: map-get(map-get($color, color), color-left);
                 }
-                .menu__#{$menu}--name{
+                .menus__#{$menu}--name{
                     @include color-gradient($color);
                 }
                 img {
@@ -34,7 +24,7 @@
 
 @mixin color-gradient($color){
     background: linear-gradient(to right, map-get(map-get($color, color), color-left) , map-get(map-get($color, color), color-right));
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
