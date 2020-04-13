@@ -24,8 +24,9 @@
 
 @mixin color-gradient($color){
     background: linear-gradient(to right, map-get(map-get($color, color), color-left) , map-get(map-get($color, color), color-right));
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 @mixin font($name-id, $name) {
