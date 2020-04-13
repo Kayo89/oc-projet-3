@@ -5,15 +5,16 @@
                 span{
                     display: block;
                 }
+                .menus__#{$menu}--name{
+                    @include color-gradient($color);
+                }
                 .menus__#{$menu}--menu {
+                    color: map-get(map-get($color, color), color-left);
+                    margin: 1rem auto;
                     @if $menu == "enchantee" {
                         text-transform: uppercase;
                         font-weight: bold;
                     }
-                    color: map-get(map-get($color, color), color-left);
-                }
-                .menus__#{$menu}--name{
-                    @include color-gradient($color);
                 }
                 img {
                     width: 25%;
@@ -24,7 +25,6 @@
 
 @mixin color-gradient($color){
     background: linear-gradient(to right, map-get(map-get($color, color), color-left) , map-get(map-get($color, color), color-right));
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }

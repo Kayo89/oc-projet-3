@@ -37,13 +37,16 @@
             padding: 2rem 0;
             display: flex;
             align-items: center;
-            > h3 {
+            justify-content: space-between;
+            &--titre{
                 width: max-content;
-                margin: auto;
-                text-align: center;
-                font-size: 1.2rem;
-                @include mobile-only{
-                    font-size: 0.95rem;
+                > h3 {
+                    margin: auto;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    @include mobile-only{
+                        font-size: 0.95rem;
+                    }
                 }
                 > hr{
                     transform: scaleX(0);
@@ -76,6 +79,9 @@
             width: 94%;
             li{
                 margin-left: -2.5rem;
+                span{
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -99,7 +105,7 @@
         .#{$key}{
             color: $color;
             &__header{
-                > h3 > hr {
+                hr {
                     border-color: $color;
                 }
             }
