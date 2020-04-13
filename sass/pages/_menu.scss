@@ -20,11 +20,11 @@
     }
     > header {
         text-align: center;
-        font-size: 3rem;
+        font-size: 1.8rem;
         padding-top: 5rem;
         padding-bottom: 2rem;
         @include mobile-only{
-            font-size: 2rem;
+            font-size: 1.2rem;
         }
         img{
             width: 80px;
@@ -37,7 +37,7 @@
             padding: 2rem 0;
             display: flex;
             align-items: center;
-            > h2 {
+            > h3 {
                 width: max-content;
                 margin: auto;
                 text-align: center;
@@ -45,35 +45,38 @@
                 @include mobile-only{
                     font-size: 0.95rem;
                 }
-                > span{
+                > hr{
                     transform: scaleX(0);
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    background-color: black;
+                    border-color: black;
                 }
                 &:hover{
-                    > span{
+                    > hr{
                         animation: subligne 2s ease-in-out forwards;
                     }
                 }
             }
         }
-        p {
+        ul {
+            list-style-type: none;
             width: 85%;
-            margin: 1rem auto;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            @include mobile-only{
-                font-size: 0.80rem;
-            }
-            span{
-                padding-left: 1rem;;
+            li {
+                margin: 1rem auto;
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.85rem;
+                @include mobile-only{
+                    font-size: 0.80rem;
+                }
+                span{
+                    padding-left: 1rem;
+                }
             }
         }
-        &--ench p{
-            width: 100%;
+        &--ench ul{
+            width: 94%;
+            li{
+                margin-left: -2.5rem;
+            }
         }
     }
     .separator--left{
@@ -96,8 +99,8 @@
         .#{$key}{
             color: $color;
             &__header{
-                > h2 > span {
-                    background-color: $color;
+                > h3 > hr {
+                    border-color: $color;
                 }
             }
         }
