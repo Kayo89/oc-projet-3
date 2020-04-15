@@ -14,8 +14,8 @@
 }
 
 .footer{
-    margin-top: 5rem;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     bottom: 0;
     color: $color-primary;
     background-color: $color-background;
@@ -25,14 +25,13 @@
         text-decoration: none;
     }
     & ul {
-        margin-left: 0;
-        padding: 1.2rem;
+        padding:0 1.2rem;
         display: flex;
         list-style-type: none;
         justify-content: space-between;
         @include mobile-only{
             font-size: 1.2rem;
-            padding: .5rem;
+            padding: 0 .5rem;
         }
         li:hover{
             animation: wiggle 1s infinite ease-in-out;

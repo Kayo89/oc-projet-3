@@ -9,12 +9,11 @@
     }
 }
 
-.menu-page{
+.card-page{
     width: 780px;
-    margin: 4rem auto;
+    margin: 4rem auto 10rem auto;
     padding-bottom: 5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    @include menu($menu-list);
+    @include box-shadow();
     @include tablet-only{
         width: 95%;
     }
@@ -49,14 +48,18 @@
                     }
                 }
                 > hr{
+                    margin-bottom: -10px;
                     transform: scaleX(0);
-                    border-color: black;
+                    border: 1px solid black;
                 }
                 &:hover{
                     > hr{
-                        animation: subligne 2s ease-in-out forwards;
+                        animation: subligne 1.4s ease-in-out forwards;
                     }
                 }
+            }
+            > img {
+                width: 25%;
             }
         }
         ul {
@@ -66,7 +69,7 @@
                 margin: 1rem auto;
                 display: flex;
                 justify-content: space-between;
-                font-size: 0.85rem;
+                font-size: 0.87rem;
                 @include mobile-only{
                     font-size: 0.80rem;
                 }
@@ -89,18 +92,18 @@
         transform: rotate(180deg);
     }
     &__footer {
-        > span {
-            display: inline;
-        }
+        margin-top: 4rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img{
+            padding-right: .5rem;
             width: 40px;
         }
-        margin-top: 4rem;
-        text-align: center;
-        font-size: 2rem;
     }
 }
-.menu-page__francaise{
+.card__francaise{
     @each $key, $color in $color-content-francaise {
         .#{$key}{
             color: $color;

@@ -8,7 +8,11 @@
     }
 }
 
-.menus{
+.card {
+    @include card-style($menu-list);
+}
+
+.cards-list{
     width: 700px;
     margin: 3rem auto;
     display: flex;
@@ -19,47 +23,42 @@
         width: 590px;
     }
     @include mobile-only{
-        width: 320px;
+        width: $mobile-card-w;
+    }
+    .card{
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        @include card-size(280px, 390px, .95rem);
+        @include mobile-only{
+            @include card-size($mobile-card-w, 430px, 1.15rem);
+        }
+        @include box-shadow();
+        transition: all 300ms ease-in-out;
+        & img{
+            width: 40px;
+            transition: all 300ms ease-in-out;
+        }
+        &:hover{
+            & img{
+                transform: scale(1.2);
+            }
+            font-size: 1.1rem;
+            @include mobile-only{
+                font-size: 1.3rem;
+            }
+            opacity: .65;
+        }
     }
 }
 
-.card{
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    width: 280px;
-    height: 390px;
-    font-size: .95rem;
-    @include mobile-only{
-        width: 320px;
-        height: 430px;
-        font-size: 1.15rem;
-    }
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    @include menu($menu-list);
-    transition: all 300ms ease-in-out;
-    & img{
-        width: 40px;
-        transition: all 300ms ease-in-out;
-    }
-    &:hover{
-        & img{
-            transform: scale(1.2);
-        }
-        font-size: 1.1rem;
-        @include mobile-only{
-            font-size: 1.3rem;
-        }
-        opacity: .65;
-    }
-}
 
 .soon{
     font-size: 1.2rem;
-    margin: auto;
+    margin: 1rem auto 10rem auto;
     width: 16rem;
     text-align: center;
     &__title{

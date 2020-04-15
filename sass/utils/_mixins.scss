@@ -1,14 +1,14 @@
-@mixin menu($menu-list){
+@mixin card-style($menu-list){
     @each $menu, $color in $menu-list {
         &__#{$menu}{
             background-color: map-get($color, bg);
                 span{
                     display: block;
                 }
-                .menus__#{$menu}--name{
+                &--name{
                     @include color-gradient($color);
                 }
-                .menus__#{$menu}--menu {
+                &--menu {
                     color: map-get(map-get($color, color), color-left);
                     margin: 1rem auto;
                     @if $menu == "enchantee" {
@@ -16,7 +16,7 @@
                         font-weight: bold;
                     }
                 }
-                img {
+                > img {
                     width: 25%;
                 }
         } 
@@ -27,6 +27,16 @@
     background: linear-gradient(to right, map-get(map-get($color, color), color-left) , map-get(map-get($color, color), color-right));
     -webkit-background-clip: text;
     color: transparent;
+}
+
+@mixin card-size($w, $h, $fsize){
+    width: $w;
+    height: $h;
+    font-size: $fsize;
+}
+
+@mixin box-shadow(){
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 @mixin font($name-id, $name) {
@@ -48,6 +58,7 @@
         @content;
     }
 }
+
 @mixin tablet-only{
     @media screen and (max-width:800px){
         @content;

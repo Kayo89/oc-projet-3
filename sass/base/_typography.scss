@@ -12,22 +12,27 @@ body{
     font-family: 'blokletters_potloodpotlood', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.menus__enchantee--name{ 
-    font-family: "black_jackregular", Arial, Helvetica, sans-serif;
-}
-.menus__francaise--name{
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-}
-.menus__papilles--name{
-    font-family: "calligraffitiregular", Arial, Helvetica, sans-serif;
-}
-.menus__gout--name{
-    font-family: "jrhandregular", Arial, Helvetica, sans-serif;
-}
-
-.menu-page section {
+.card-page section {
     font-family: "blokletters_potloodpotlood", Arial, Helvetica, sans-serif;
 }
-.menu-page__francaise section{
-    font-family: 'Verdana', Helvetica, sans-serif;
+
+.card__enchantee--name{ 
+    font-family: "black_jackregular", Arial, Helvetica, sans-serif;
+}
+
+.card__francaise{
+    &--name{
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    }
+    section{
+        font-family: 'Verdana', Helvetica, sans-serif;
+    }
+}
+
+.card__papilles--name{
+    font-family: "calligraffitiregular", Arial, Helvetica, sans-serif;
+}
+
+.card__gout--name{
+    font-family: "jrhandregular", Arial, Helvetica, sans-serif;
 }
