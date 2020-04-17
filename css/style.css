@@ -13,13 +13,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "redressedregular";
-  src: url("../fonts/Redressed-webfont.eot");
-  src: url("../fonts/Redressed-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Redressed-webfont.woff2") format("woff2"), url("../fonts/Redressed-webfont.woff") format("woff"), url("../fonts/Redressed-webfont.ttf") format("truetype"), url("../fonts/Redressed-webfont.svg#redressedregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "blokletters_potloodpotlood";
   src: url("../fonts/Blokletters-Potlood-webfont.eot");
   src: url("../fonts/Blokletters-Potlood-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Blokletters-Potlood-webfont.woff2") format("woff2"), url("../fonts/Blokletters-Potlood-webfont.woff") format("woff"), url("../fonts/Blokletters-Potlood-webfont.ttf") format("truetype"), url("../fonts/Blokletters-Potlood-webfont.svg#blokletters_potloodpotlood") format("svg");
