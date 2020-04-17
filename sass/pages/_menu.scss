@@ -65,6 +65,8 @@
         ul {
             list-style-type: none;
             width: 85%;
+            padding: 0;
+            margin: auto;
             li {
                 margin: 1rem auto;
                 display: flex;
@@ -79,9 +81,8 @@
             }
         }
         &--ench ul{
-            width: 94%;
+            width: 100%;
             li{
-                margin-left: -2.5rem;
                 span{
                     font-weight: bold;
                 }
